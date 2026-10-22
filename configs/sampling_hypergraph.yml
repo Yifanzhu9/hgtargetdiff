@@ -1,0 +1,12 @@
+model:
+  # Point this to the best hypergraph checkpoint produced by
+  # scripts/train_diffusion.py configs/training_hypergraph.yml
+  checkpoint: ./pretrained_models/hypergraph_best.pt
+
+sample:
+  seed: 2021
+  num_samples: 100
+  num_steps: 1000
+  pos_only: False
+  center_pos_mode: protein
+  sample_num_atoms: prior

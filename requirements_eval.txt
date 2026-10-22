@@ -1,0 +1,10 @@
+# TargetDiff 评测依赖 (Vina Docking 等, 训练不需要, 采样评测时再装)
+# 用法: pip install -r requirements_eval.txt
+# openbabel 没有可靠的 pip wheel, 请用 conda 装: conda install -c conda-forge openbabel
+
+meeko==0.5.0
+vina==1.2.5
+pdb2pqr==3.6.1
+mmcif-pdbx==2.0.1
+docutils==0.17.1
+git+https://github.com/Valdes-Tresanco-MS/AutoDockTools_py3.git@aee55d50d5bdcfdbcd80220499df8cde2a8f4b2a

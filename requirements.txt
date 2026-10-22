@@ -1,0 +1,31 @@
+# TargetDiff 训练依赖 (H100 / sm_90 / CUDA 12.1 / Python 3.10)
+# 用法: pip install -r requirements.txt
+#
+# 国内服务器如直连慢,可把下面两行换成:
+#   --extra-index-url https://mirrors.aliyun.com/pypi/simple/
+#   (data.pyg.org 不通时: 挂代理, 或改用 conda 的 pyg channel 装 torch_scatter/torch_cluster)
+--extra-index-url https://download.pytorch.org/whl/cu121
+--find-links https://data.pyg.org/whl/torch-2.2.2+cu121.html
+
+# PyTorch (PyPI 默认 wheel 自带 CUDA 12.1 runtime, 支持 H100 sm_90)
+torch==2.2.2+cu121
+
+# PyG 生态 (版本与 torch 2.2.2+cu121 严格配套)
+torch_geometric==2.5.3
+pyg_lib==2.4.0+pt22cu121
+torch_scatter==2.1.2+pt22cu121
+torch_cluster==1.6.3+pt22cu121
+
+# 数据处理 / 化学
+numpy==1.26.4
+scipy==1.11.4
+rdkit==2023.9.5
+lmdb==1.4.1
+easydict==1.13
+pyyaml==6.0.1
+
+# 训练辅助
+tqdm==4.66.4
+scikit-learn==1.3.2
+tensorboard==2.16.2
+matplotlib==3.8.4
